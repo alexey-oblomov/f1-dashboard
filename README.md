@@ -36,13 +36,31 @@ pnpm dev
 
 Open [http://localhost:5173](http://localhost:5173)
 
+## Live demo
+
+After enabling GitHub Pages (Settings → Pages → Source: **GitHub Actions**), the app is published at:
+
+**https://alexey-oblomov.github.io/f1-dashboard/**
+
+Deploy runs automatically on push to `main` via [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
+
+Local preview of the GitHub Pages build:
+
+```bash
+pnpm preview:gh-pages
+```
+
+Open [http://localhost:4173/f1-dashboard/](http://localhost:4173/f1-dashboard/)
+
 ### Scripts
 
 | Command | Description |
 |---------|-------------|
 | `pnpm dev` | Dev server |
 | `pnpm build` | Production build |
+| `pnpm build:gh-pages` | Production build for GitHub Pages |
 | `pnpm preview` | Preview production build |
+| `pnpm preview:gh-pages` | Build and preview GitHub Pages output |
 | `pnpm test` | Run tests |
 | `pnpm test:watch` | Tests in watch mode |
 | `pnpm lint` | ESLint |

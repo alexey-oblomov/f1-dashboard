@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { AppLayout } from '@/components/layout/AppLayout'
 import { ROUTES } from '@/constants'
+import { getBasename } from '@/lib/getBasename'
 import { CalendarPage } from '@/pages/CalendarPage'
 import { DashboardPage } from '@/pages/DashboardPage'
 import { HomePage } from '@/pages/HomePage'
@@ -10,7 +11,7 @@ import { StandingsPage } from '@/pages/StandingsPage'
 
 export function AppRouter() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={getBasename()}>
       <Routes>
         <Route element={<AppLayout />}>
           <Route path={ROUTES.home} element={<HomePage />} />
