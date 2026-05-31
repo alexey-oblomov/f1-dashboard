@@ -1,5 +1,18 @@
-// Placeholder — layout will be implemented in Phase 2
+import { Outlet } from 'react-router-dom'
+import { Header } from './Header'
+import { Sidebar } from './Sidebar'
+import styles from './AppLayout.module.css'
 
-export function AppLayout({ children }: { children: React.ReactNode }) {
-  return <div>{children}</div>
+export function AppLayout() {
+  return (
+    <div className={styles.layout}>
+      <Header />
+      <div className={styles.body}>
+        <Sidebar />
+        <main className={styles.main}>
+          <Outlet />
+        </main>
+      </div>
+    </div>
+  )
 }

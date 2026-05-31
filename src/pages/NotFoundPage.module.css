@@ -1,0 +1,21 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding-top: var(--space-8);
+}
+
+.not-found-title {
+  font-size: var(--font-size-3xl);
+  font-weight: 600;
+}
+
+.not-found-message {
+  color: var(--color-text-secondary);
+  max-width: 28rem;
+}
+
+.back-link {
+  text-decoration: none;
+}

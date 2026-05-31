@@ -1,3 +1,11 @@
+import { LABELS } from '@/constants'
+import styles from './page.module.css'
+
 export function DashboardPage() {
-  return <h1>Dashboard</h1>
+  return (
+    <div className={styles.page}>
+      <h1 className={styles.title}>{LABELS.pageDashboard}</h1>
+      <p className={styles.description}>{LABELS.pageDashboardDescription}</p>
+    </div>
+  )
 }

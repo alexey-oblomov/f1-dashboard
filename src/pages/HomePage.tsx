@@ -1,3 +1,11 @@
+import { LABELS } from '@/constants'
+import styles from './page.module.css'
+
 export function HomePage() {
-  return <h1>Home</h1>
+  return (
+    <div className={styles.page}>
+      <h1 className={styles.title}>{LABELS.pageHome}</h1>
+      <p className={styles.description}>{LABELS.pageHomeDescription}</p>
+    </div>
+  )
 }
