@@ -16,3 +16,4 @@ export {
   CONSTRUCTOR_STANDINGS_TABLE_COLUMNS,
 } from './tableColumns'
 export { BADGE_LABELS } from './badgeLabels'
+export { QUICK_LINKS, type QuickLinkId } from './quickLinks'
