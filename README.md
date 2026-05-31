@@ -38,19 +38,27 @@ Open [http://localhost:5173](http://localhost:5173)
 
 ## Live demo
 
-After enabling GitHub Pages (Settings → Pages → Source: **GitHub Actions**), the app is published at:
-
 **https://alexey-oblomov.github.io/f1-dashboard/**
 
-Deploy runs automatically on push to `main` via [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
+### First-time GitHub Pages setup (required once)
 
-Local preview of the GitHub Pages build:
+If the deploy job fails with `Failed to create deployment (status: 404)`:
+
+1. Open [Settings → Pages](https://github.com/alexey-oblomov/f1-dashboard/settings/pages)
+2. **Build and deployment → Source:** select **GitHub Actions** (not “Deploy from a branch”)
+3. **Actions** → **Deploy to GitHub Pages** → **Re-run all jobs**
+
+Deploy runs automatically on every push to `main` via [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
+
+### Local preview (GitHub Pages build)
 
 ```bash
 pnpm preview:gh-pages
 ```
 
-Open [http://localhost:4173/f1-dashboard/](http://localhost:4173/f1-dashboard/)
+Opens **http://localhost:4173/f1-dashboard/** — use this exact URL (not `http://localhost:4173/`).
+
+If you see a white screen, the preview server was started without `--base /f1-dashboard/` or the wrong URL was opened.
 
 ### Scripts
 

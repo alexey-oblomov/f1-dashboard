@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "build:gh-pages": "tsc -b && vite build --base /f1-dashboard/ && node scripts/postbuild-gh-pages.mjs",
-    "preview:gh-pages": "pnpm build:gh-pages && vite preview",
+    "preview:gh-pages": "pnpm build:gh-pages && vite preview --base /f1-dashboard/ --open /f1-dashboard/",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write \"src/**/*.{ts,tsx,css,json}\"",
