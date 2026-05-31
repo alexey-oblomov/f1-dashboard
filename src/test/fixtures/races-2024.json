@@ -1,0 +1,23 @@
+{
+  "MRData": {
+    "RaceTable": {
+      "season": "2024",
+      "Races": [
+        {
+          "season": "2024",
+          "round": "1",
+          "raceName": "Bahrain Grand Prix",
+          "date": "2024-03-02",
+          "time": "15:00:00Z",
+          "Circuit": {
+            "circuitName": "Bahrain International Circuit",
+            "Location": {
+              "country": "Bahrain",
+              "locality": "Sakhir"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

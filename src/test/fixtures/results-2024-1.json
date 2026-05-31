@@ -1,0 +1,46 @@
+{
+  "MRData": {
+    "RaceTable": {
+      "Races": [
+        {
+          "season": "2024",
+          "round": "1",
+          "raceName": "Bahrain Grand Prix",
+          "date": "2024-03-02",
+          "Circuit": {
+            "circuitName": "Bahrain International Circuit",
+            "Location": {
+              "country": "Bahrain"
+            }
+          },
+          "Results": [
+            {
+              "position": "1",
+              "points": "25",
+              "status": "Finished",
+              "Driver": {
+                "givenName": "Max",
+                "familyName": "Verstappen"
+              },
+              "Constructor": {
+                "name": "Red Bull"
+              }
+            },
+            {
+              "position": "2",
+              "points": "18",
+              "status": "Finished",
+              "Driver": {
+                "givenName": "Sergio",
+                "familyName": "Pérez"
+              },
+              "Constructor": {
+                "name": "Red Bull"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

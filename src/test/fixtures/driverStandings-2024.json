@@ -1,0 +1,27 @@
+{
+  "MRData": {
+    "StandingsTable": {
+      "season": "2024",
+      "StandingsLists": [
+        {
+          "DriverStandings": [
+            {
+              "position": "1",
+              "points": "437",
+              "wins": "9",
+              "Driver": {
+                "givenName": "Max",
+                "familyName": "Verstappen"
+              },
+              "Constructors": [
+                {
+                  "name": "Red Bull"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

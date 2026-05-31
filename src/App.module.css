@@ -1,0 +1,22 @@
+.sandbox {
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+.card-text {
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-4);
+  color: var(--color-text-secondary);
+}
+
+.button-row,
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+}
