@@ -34,3 +34,20 @@
   border-right: 3px solid var(--color-accent);
   background-color: var(--color-bg-elevated);
 }
+
+@media (max-width: 768px) {
+  .sidebarMobile {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    transform: translateX(-100%);
+    transition: transform var(--transition-base);
+    width: min(var(--sidebar-width), 80vw);
+  }
+
+  .sidebarOpen {
+    transform: translateX(0);
+  }
+}

@@ -10,6 +10,7 @@ import {
 import { Card } from '@/components/ui'
 import { CHART_CONFIG, LABELS } from '@/constants'
 import type { ChartDataPoint } from '@/lib/chartData'
+import { formatPoints } from '@/lib/formatters'
 import styles from './PointsChart.module.css'
 
 interface ConstructorPointsChartProps {
@@ -56,7 +57,7 @@ export function ConstructorPointsChart({ data, isLoading }: ConstructorPointsCha
                 borderRadius: '8px',
               }}
               labelStyle={{ color: 'var(--color-text-primary)' }}
-              formatter={(value) => [`${value} pts`, LABELS.chartAxisPoints]}
+              formatter={(value) => [formatPoints(Number(value)), LABELS.chartAxisPoints]}
             />
             <Bar dataKey="points" fill={CHART_CONFIG.barColor} radius={[4, 4, 0, 0]} />
           </BarChart>

@@ -1,73 +1,84 @@
-# React + TypeScript + Vite
+# F1 Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Pet-project SPA for Formula 1 season data — calendar, race results, standings, and analytics dashboard.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Vite, React 19, TypeScript
+- React Router, TanStack Query
+- Zod, CSS Modules, Recharts
+- Vitest, ESLint, Prettier, pnpm
 
-## React Compiler
+## Data source
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+[Jolpica F1 API](https://api.jolpi.ca/ergast/f1/) — free Ergast-compatible REST API.
 
-## Expanding the ESLint configuration
+Endpoints used:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- `/{season}/races.json` — race calendar
+- `/{season}/{round}/results.json` — race results
+- `/{season}/driverStandings.json` — driver championship
+- `/{season}/constructorStandings.json` — constructor championship
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Getting started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Prerequisites
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js 20+
+- pnpm
+
+### Install and run
+
+```bash
+pnpm install
+pnpm dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open [http://localhost:5173](http://localhost:5173)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Scripts
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Command | Description |
+|---------|-------------|
+| `pnpm dev` | Dev server |
+| `pnpm build` | Production build |
+| `pnpm preview` | Preview production build |
+| `pnpm test` | Run tests |
+| `pnpm test:watch` | Tests in watch mode |
+| `pnpm lint` | ESLint |
+| `pnpm format` | Prettier format |
+
+## Project structure
+
 ```
+src/
+├── api/          # HTTP client, Zod schemas, mappers
+├── app/          # Router, providers
+├── components/   # UI kit + layout
+├── constants/    # No magic strings
+├── features/     # Feature modules
+├── hooks/        # TanStack Query hooks
+├── lib/          # Utilities, formatters
+├── pages/        # Route pages
+└── types/        # Domain types
+```
+
+## Routes
+
+| Path | Description |
+|------|-------------|
+| `/` | Home — season overview, next race, latest results |
+| `/calendar` | Race calendar |
+| `/races/:season/:round` | Race results |
+| `/standings` | Driver and constructor standings |
+| `/dashboard` | Summary cards and points charts |
+
+Season filter: `?season=2024` (synced via Header across all pages).
+
+## Docs
+
+See [`docs/`](docs/) for development phases, architecture, and implementation plans.
+
+## License
+
+Private pet project.

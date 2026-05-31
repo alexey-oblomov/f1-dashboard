@@ -10,3 +10,7 @@
 .table {
   margin-top: var(--space-2);
 }
+
+.tableWrapper {
+  overflow-x: auto;
+}

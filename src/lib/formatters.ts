@@ -19,3 +19,11 @@ export function formatCountdown(parts: CountdownParts): string {
     .replace('{hours}', String(parts.hours))
     .replace('{minutes}', String(parts.minutes))
 }
+
+export function formatPoints(points: number): string {
+  return `${points} pts`
+}
+
+export function formatWins(wins: number): string {
+  return wins === 1 ? '1 win' : `${wins} wins`
+}

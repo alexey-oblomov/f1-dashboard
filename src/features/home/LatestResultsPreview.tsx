@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Card, Button, Skeleton } from '@/components/ui'
 import { LABELS, routePaths } from '@/constants'
+import { formatPoints } from '@/lib/formatters'
 import type { Race, RaceResult } from '@/types'
 import styles from './LatestResultsPreview.module.css'
 
@@ -49,7 +50,7 @@ export function LatestResultsPreview({
             <li key={result.position} className={styles.item}>
               <span className={styles.position}>{result.position}.</span>
               <span className={styles.driver}>{result.driverName}</span>
-              <span className={styles.points}>{result.points} pts</span>
+              <span className={styles.points}>{formatPoints(result.points)}</span>
             </li>
           ))}
         </ol>

@@ -18,3 +18,4 @@ export {
 export { BADGE_LABELS } from './badgeLabels'
 export { QUICK_LINKS, type QuickLinkId } from './quickLinks'
 export { CHART_CONFIG } from './chartConfig'
+export { BREAKPOINTS, MEDIA_QUERIES } from './layout'

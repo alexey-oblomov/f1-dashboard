@@ -11,10 +11,6 @@ export const LABELS = {
   pageStandings: 'Standings',
   pageDashboard: 'Dashboard',
   pageRaceResults: 'Race Results',
-  pageHomeDescription: 'Season overview — coming soon.',
-  pageCalendarDescription: 'Race calendar — coming soon.',
-  pageStandingsDescription: 'Driver and constructor standings — coming soon.',
-  pageDashboardDescription: 'Charts and summary — coming soon.',
   pageRaceResultsMeta: 'Season {season}, Round {round}',
   raceHeaderTitle: 'Round {round} — {raceName} {season}',
   backToCalendar: 'Back to Calendar',
@@ -61,4 +57,6 @@ export const LABELS = {
   chartConstructorPointsTitle: 'Constructor Points — Top 10',
   chartAxisPoints: 'Points',
   chartNoData: 'No chart data available.',
+  menuOpen: 'Open menu',
+  menuClose: 'Close menu',
 } as const

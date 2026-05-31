@@ -14,7 +14,8 @@ export function RaceTable({ races }: RaceTableProps) {
   const navigate = useNavigate()
 
   return (
-    <Table className={styles.table}>
+    <div className={styles.tableWrapper}>
+      <Table className={styles.table}>
       <TableHead>
         <TableRow>
           <TableHeaderCell>{CALENDAR_TABLE_COLUMNS.round}</TableHeaderCell>
@@ -58,5 +59,6 @@ export function RaceTable({ races }: RaceTableProps) {
         })}
       </TableBody>
     </Table>
+    </div>
   )
 }
