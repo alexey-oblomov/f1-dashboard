@@ -1,3 +1,6 @@
 export { useSeason } from './useSeason'
 export { useRaces } from './useRaces'
 export { useRaceResults } from './useRaceResults'
+export { useDriverStandings } from './useDriverStandings'
+export { useConstructorStandings } from './useConstructorStandings'
+export { useStandingsTab } from './useStandingsTab'

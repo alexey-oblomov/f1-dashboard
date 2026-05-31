@@ -1,0 +1,10 @@
+.skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.error,
+.empty {
+  color: var(--color-text-secondary);
+}

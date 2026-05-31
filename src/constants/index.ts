@@ -8,5 +8,11 @@ export { QUERY_STALE_TIME } from './query'
 export { AVAILABLE_SEASONS, DEFAULT_SEASON, type Season } from './seasons'
 export { SEARCH_PARAMS } from './searchParams'
 export { QUERY_KEYS } from './queryKeys'
-export { CALENDAR_TABLE_COLUMNS, RESULTS_TABLE_COLUMNS } from './tableColumns'
+export { STANDINGS_TAB, DEFAULT_STANDINGS_TAB, type StandingsTab } from './standingsTab'
+export {
+  CALENDAR_TABLE_COLUMNS,
+  RESULTS_TABLE_COLUMNS,
+  DRIVER_STANDINGS_TABLE_COLUMNS,
+  CONSTRUCTOR_STANDINGS_TABLE_COLUMNS,
+} from './tableColumns'
 export { BADGE_LABELS } from './badgeLabels'

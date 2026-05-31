@@ -25,4 +25,7 @@ export const LABELS = {
   noRaces: 'No races found for this season.',
   retry: 'Retry',
   calendarEmpty: 'No races scheduled.',
+  standingsTabDrivers: 'Drivers',
+  standingsTabConstructors: 'Constructors',
+  noStandings: 'No standings available for this season.',
 } as const

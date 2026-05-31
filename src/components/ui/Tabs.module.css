@@ -1,0 +1,25 @@
+.list {
+  display: flex;
+  gap: var(--space-1);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-4);
+}
+
+.trigger {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+
+.trigger[data-active='true'] {
+  color: var(--color-text-primary);
+  border-bottom-color: var(--color-accent);
+}
+
+.panel[hidden] {
+  display: none;
+}
