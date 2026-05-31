@@ -1,4 +1,5 @@
 import { LABELS } from '@/constants'
+import { SeasonSelector } from '@/features/calendar'
 import styles from './Header.module.css'
 
 export function Header() {
@@ -12,19 +13,7 @@ export function Header() {
       </div>
 
       <div className={styles.actions}>
-        <label className={styles.seasonLabel}>
-          <span>{LABELS.seasonSelector}</span>
-          <select
-            className={styles.seasonSelect}
-            disabled
-            defaultValue={LABELS.seasonSelectorPlaceholder}
-            aria-label={LABELS.seasonSelector}
-          >
-            <option value={LABELS.seasonSelectorPlaceholder}>
-              {LABELS.seasonSelectorPlaceholder}
-            </option>
-          </select>
-        </label>
+        <SeasonSelector />
       </div>
     </header>
   )

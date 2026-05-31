@@ -16,4 +16,9 @@ export const LABELS = {
   pageStandingsDescription: 'Driver and constructor standings — coming soon.',
   pageDashboardDescription: 'Charts and summary — coming soon.',
   pageRaceResultsMeta: 'Season {season}, Round {round}',
+  loading: 'Loading...',
+  error: 'Something went wrong. Please try again.',
+  noRaces: 'No races found for this season.',
+  retry: 'Retry',
+  calendarEmpty: 'No races scheduled.',
 } as const
